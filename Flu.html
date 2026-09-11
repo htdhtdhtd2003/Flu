@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limited Time Vaccine Offer</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffde59, #ff6f91);
+            color: #222;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+            padding: 5vw;
+            text-align: center;
+
+            /* NEON BORDER */
+            border: 12px solid #ff3b3f;
+            border-radius: 50px;
+            box-shadow:
+                0 0 25px #ff3b3f,
+                0 0 50px #ff3b3f,
+                0 0 75px #ff3b3f;
+            animation: borderGlow 2.5s infinite ease-in-out;
+        }
+
+        /* BORDER GLOW ANIMATION */
+        @keyframes borderGlow {
+            0% {
+                box-shadow:
+                    0 0 25px #ff3b3f,
+                    0 0 50px #ff3b3f,
+                    0 0 75px #ff3b3f;
+            }
+            50% {
+                box-shadow:
+                    0 0 40px #ff6f91,
+                    0 0 80px #ff6f91,
+                    0 0 120px #ff6f91;
+            }
+            100% {
+                box-shadow:
+                    0 0 25px #ff3b3f,
+                    0 0 50px #ff3b3f,
+                    0 0 75px #ff3b3f;
+            }
+        }
+
+        .header {
+            background-color: #ff3b3f;
+            color: #fff;
+            padding: 4vw;
+            border-radius: 45px;
+            font-size: 10vw;
+            font-weight: 900;
+            box-shadow: 0 14px 32px rgba(0,0,0,0.25);
+        }
+
+        .limited {
+            background-color: #000;
+            color: #ffde59;
+            padding: 3vw;
+            border-radius: 40px;
+            font-size: 7vw;
+            font-weight: 900;
+            margin-top: 4vw;
+            box-shadow: 0 14px 32px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+        }
+
+        .expires {
+            background-color: #ff3b3f;
+            color: #ffffff;
+            padding: 3vw;
+            border-radius: 40px;
+            font-size: 7vw;
+            font-weight: 900;
+            margin-top: 3vw;
+            box-shadow: 0 14px 32px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+        }
+
+        .pricing-container {
+            display: flex;
+            gap: 4vw;
+            margin: 6vw 0;
+            flex: 1;
+        }
+
+        /* FLASH + NEON GLOW EFFECT FOR PRICE CARDS */
+        @keyframes flash {
+            0% {
+                transform: scale(1);
+                border-color: #ff9eb5;
+                box-shadow:
+                    0 0 20px #ff9eb5,
+                    0 0 40px #ff9eb5,
+                    0 14px 32px rgba(0,0,0,0.22);
+            }
+            50% {
+                transform: scale(1.06);
+                border-color: #ff3b6f;
+                box-shadow:
+                    0 0 25px #ff3b6f,
+                    0 0 55px #ff3b6f,
+                    0 18px 40px rgba(0,0,0,0.35);
+            }
+            100% {
+                transform: scale(1);
+                border-color: #ff9eb5;
+                box-shadow:
+                    0 0 20px #ff9eb5,
+                    0 0 40px #ff9eb5,
+                    0 14px 32px rgba(0,0,0,0.22);
+            }
+        }
+
+        .card {
+            flex: 1;
+            background: #ffffff;
+            border-radius: 55px;
+            padding: 4vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 6px solid #ff9eb5;
+            animation: flash 1.6s infinite ease-in-out;
+        }
+
+        .price {
+            font-size: 16vw;
+            color: #ff3b3f;
+            font-weight: 900;
+            margin-bottom: 2vw;
+            text-shadow:
+                0 0 10px #ff3b3f,
+                0 0 20px #ff3b3f,
+                0 0 30px #ff3b3f;
+        }
+
+        .label {
+            font-size: 6vw;
+            font-weight: 800;
+            color: #444;
+        }
+
+        .availability {
+            background-color: #00c896;
+            color: #ffffff;
+            padding: 4vw;
+            border-radius: 45px;
+            font-size: 7vw;
+            font-weight: 900;
+            margin-top: 4vw;
+            box-shadow: 0 14px 32px rgba(0,0,0,0.25);
+        }
+
+        .footer {
+            margin-top: 4vw;
+            font-size: 5vw;
+            color: #333;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        Best Deal Today!
+    </div>
+
+    <div class="limited">
+        LIMITED TIME OFFER — ACT NOW!
+    </div>
+
+    <div class="expires">
+        OFFER EXPIRES NOV 28
+    </div>
+
+    <div class="pricing-container">
+        <div class="card">
+            <div class="price">$5</div>
+            <div class="label">Flu</div>
+        </div>
+
+        <div class="card">
+            <div class="price">$20</div>
+            <div class="label">Flu + Any Extra Vaccine</div>
+        </div>
+    </div>
+
+    <div class="availability">
+        New Flu & Covid Shots Available Now
+    </div>
+
+    <div class="footer">
+        WALK‑INS WELCOME • FAST • FRIENDLY • AFFORDABLE
+    </div>
+
+</body>
+</html>
